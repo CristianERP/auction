@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import Featured from "./pages/Featured"
 
 function App() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function App() {
         //login y registro de usuario
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/featured" element={<Featured/>} />
       </Routes>
     </main>
     </div>
