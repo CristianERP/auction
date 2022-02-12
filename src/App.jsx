@@ -10,8 +10,7 @@ import Register from "./pages/Register"
 import Featured from "./pages/Featured"
 
 function App() {
-  const location = useLocation();
-  console.log(location.pathname);
+  const location = useLocation()
 
   if (location.pathname === "/login") {
     return (
