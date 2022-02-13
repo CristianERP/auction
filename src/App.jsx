@@ -8,6 +8,7 @@ import {
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Featured from "./pages/Featured"
+import AuctionDetail from "./components/AuctionDetail"
 
 function App() {
   const location = useLocation()
@@ -30,10 +31,12 @@ function App() {
     <main className="px-8 pt-4">
       <Routes>
         <Route path="/" element={<Home />} />
-        //login y registro de usuario
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/featured" element={<Featured/>} />
+        <Route path="/detail"> 
+          <Route path=":id" element={<AuctionDetail />} />
+        </Route>
       </Routes>
     </main>
     </div>
