@@ -8,6 +8,7 @@ const ITEMS = [
         categoria: 'Ropa',
         oferta: 0,
         vendedor: 'Juan',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const ITEMS = [
         categoria: 'Ropa',
         oferta: 0,
         vendedor: 'Pedro',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },{
         id: 3,
         nombre: 'iPhone',
@@ -27,6 +29,7 @@ const ITEMS = [
         categoria: 'Tecnologia',
         oferta: 0,
         vendedor: 'Catalina',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },{
         id: 4,
         nombre: 'Anillo',
@@ -36,6 +39,7 @@ const ITEMS = [
         categoria: 'Joyeria',
         oferta: 0,
         vendedor: 'Jesus',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
     {
         id: 5,
@@ -46,6 +50,7 @@ const ITEMS = [
         categoria: 'Joyeria',
         oferta: 0,
         vendedor: 'Jesus',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
     {
         id: 6,
@@ -56,6 +61,7 @@ const ITEMS = [
         categoria: 'Joyeria',
         oferta: 0,
         vendedor: 'Jesus',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
     {
         id: 7,
@@ -66,6 +72,7 @@ const ITEMS = [
         categoria: 'Joyeria',
         oferta: 0,
         vendedor: 'Jesus',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
     {
         id: 8,
@@ -76,6 +83,7 @@ const ITEMS = [
         categoria: 'Joyeria',
         oferta: 0,
         vendedor: 'Jesus',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
     {
         id: 9,
@@ -86,6 +94,7 @@ const ITEMS = [
         categoria: 'Joyeria',
         oferta: 0,
         vendedor: 'Jesus',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
     {
         id: 10,
@@ -96,6 +105,7 @@ const ITEMS = [
         categoria: 'Joyeria',
         oferta: 0,
         vendedor: 'Jesus',
+        imagenes: ['../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg','../../assets/images/item-1.jpg', '../../assets/images/banner.png']
     },
 ]
 
