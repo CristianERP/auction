@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import Corazon from "../../assets/icons/Corazon";
-const CardDetail = ({name, precio, ofertas, imagen}) => {
+const CardDetail = ({id, name, precio, ofertas, imagen}) => {
     return ( 
-    <article className="container w-full max-w-md mx-auto text-white border">
+    <Link to={`/detail/${id}`} className="container w-full max-w-md mx-auto text-white border">
     <img src="../../assets/images/item-1.jpg" alt=""  className="object-cover w-full"/>
     <div className="relative m-2">
       <p>Zapatilla Nike</p>
@@ -9,13 +10,13 @@ const CardDetail = ({name, precio, ofertas, imagen}) => {
       <div className="flex text-sm">
         <span className="font-bold">Ofertas : 10</span>
         <span>Tiempo: 1h</span>
-        <a href="">Hacer Oferta</a>
+        <button href="">Hacer Oferta</button>
       </div>
       <div className="absolute top-0 right-0 cursor-pointer">
         <Corazon />
       </div>
     </div>
-  </article> );
+  </Link> );
 }
  
 export default CardDetail;
