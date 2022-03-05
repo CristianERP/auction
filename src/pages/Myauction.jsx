@@ -1,7 +1,7 @@
 import Sidebar from "../components/Sidebar";
 import Card from "../components/Card";
 
-const Msubs = () => {
+const Myauction = () => {
     return (
         <div className="lg:col-span-2 xl:col-span-3">
         <div className="grid gap-2 md:grid lg:grid-cols-2 xl:grid-cols-3">
@@ -12,4 +12,4 @@ const Msubs = () => {
     );
 }
 
-export default Msubs;
+export default Myauction;
