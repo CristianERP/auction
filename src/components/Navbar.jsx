@@ -31,7 +31,7 @@ const Navbar = () => {
                                 <Reciente />
                                 <span>Cotizados Recientemente</span>
                             </NavButton>
-                            <NavButton>
+                            <NavButton path='/myauction'>
                                 <Money />
                                 <span>Mis subastas</span>
                             </NavButton>
@@ -52,7 +52,7 @@ const Navbar = () => {
                     <Reciente />
                     <span>Cotizados Recientemente</span>
                 </NavButton>
-                <NavButton>
+                <NavButton path='/myauction'>
                     <Money />
                     <span>Mis subastas</span>
                 </NavButton>
