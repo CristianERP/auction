@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import getDepartamentos from "../../service/getDetamentos";
+import getDepartamentos from "../../service/getDepartamentos";
 
 
 const Locacion = () => {
