@@ -8,20 +8,21 @@ import {
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Featured from "./pages/Featured"
+import Myauction from "./pages/Myauction"
 import AuctionDetail from "./components/AuctionDetail"
 
 function App() {
   const location = useLocation()
 
-  if (location.pathname === "/login") {
-    return (
-    <div className="min-h-screen bg-gray-700">
-      <main className="grid h-screen px-8 pt-4 place-items-center">
-        <Login />
-      </main>
-    </div>
-    );
-  }
+ // if (location.pathname === "/login") {
+  //  return (
+  //  <div className="min-h-screen bg-gray-700">
+  //    <main className="grid h-screen px-8 pt-4 place-items-center">
+  //      <Login />
+  //    </main>
+  //  </div>
+  //  );
+  //}
 
   return (
     <div className="min-h-screen bg-gray-700">
@@ -34,6 +35,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/featured" element={<Featured/>} />
+        <Route path="//myauction" element={<Myauction/>}/>
         <Route path="/detail"> 
           <Route path=":id" element={<AuctionDetail />} />
         </Route>
