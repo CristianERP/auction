@@ -1,7 +1,60 @@
 import { useState } from "react";
+import axios from "axios";
 
-const Register = () => {
+const Register = ({handleRegister}) => {
     const [showModal, setShowModal] = useState(false);
+    const [name, setName] = useState('')
+    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
+
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      if(!name || !username || !email || !password) {
+        setError('Todos los campos son requeridos')
+        setTimeout(() =>
+        setError(''), 3000)
+        return
+      }
+      if(username.length < 6){
+        setError('Username debe ser mayor a 6 caracteres')
+        setTimeout(() =>
+        setError(''), 3000)
+        return
+      }
+      if(password.length < 8){
+        setError('Contraseña debe ser mayor a 8 caracteres')
+        setTimeout(() =>
+        setError(''), 3000)
+        return
+      }
+      const user = 
+      {
+        "name": name,
+        "username": username,
+        "email": email,
+        "password": password
+      }
+      try {
+        const response = await axios.post('http://localhost:3333/subasta/api/users/register', user)
+        const data = await response.data
+        setName('')
+        setUsername('')
+        setEmail('')
+        setPassword('')
+        handleRegister(true)
+        setShowModal(false)
+
+      } catch (error) {
+        setError('No se pudo registrar el usuario')
+        setTimeout(() =>
+        setError(''), 3000)
+      }
+
+
+    }
+
   return (
     <>
       <button
@@ -35,7 +88,7 @@ const Register = () => {
                 </div>
                 {/*body*/}
                 <div className="relative flex-auto p-6">
-                  <form className="text-sm">
+                  <form className="text-sm" onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block mb-2 text-sm font-bold text-grey-darker">
                             Nombre:
@@ -43,19 +96,23 @@ const Register = () => {
                         <input
                             className="w-full px-3 py-2 border rounded text-grey-darker"
                             type="text"
-                            name="nombre"
+                            name="name"
                             placeholder="Nombre"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
                     </div>
                     <div className="mb-4">
                         <label className="block mb-2 text-sm font-bold text-grey-darker">
-                            Apellido:
+                            Username:
                         </label>
                         <input
                             className="w-full px-3 py-2 border rounded text-grey-darker"
                             type="text"
-                            name="apellido"
-                            placeholder="Apellido"
+                            name="username"
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
                         />
                     </div>
                     <div className="mb-4">
@@ -67,6 +124,8 @@ const Register = () => {
                             type="text"
                             name="correo"
                             placeholder="Correo"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="mb-4">
@@ -78,22 +137,13 @@ const Register = () => {
                             type="password"
                             name="contraseña"
                             placeholder="Contraseña"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block mb-2 text-sm font-bold text-grey-darker">
-                            Confirmar contraseña:
-                        </label>
-                        <input
-
-                            className="w-full px-3 py-2 border rounded text-grey-darker"
-                            type="password"
-                            name="confirmar contraseña"
-                            placeholder="Confirmar contraseña"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
                     <div>
                         <button className="block px-4 py-1 mx-auto mb-2 text-white rounded-full bg-gradient-to-r from-blue-400 to-blue-600 ">Registrar</button>
+                        <p>{error}</p>
                     </div>
                   </form>
                 </div>
