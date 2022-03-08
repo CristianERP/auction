@@ -1,4 +1,4 @@
-import loguito from '../../assets/images/Logo.jpeg'
+import loguito from '../../assets/images/LogoApp.jpeg'
 
 const Logo = () => {
     return (
